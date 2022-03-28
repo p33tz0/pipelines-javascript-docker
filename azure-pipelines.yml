@@ -14,3 +14,6 @@
             repository: $(imageName)
             command: build
             Dockerfile: app/Dockerfile
+            containerRegistry: $(dockerRegistryServiceConnection)
+            tags: |
+              $(tag)
