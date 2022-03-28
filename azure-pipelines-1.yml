@@ -37,3 +37,8 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'AW Academy FI (397dc614-480f-46f5-a35f-d4e5d10d1095)'
+        appName: 'cicdpetrusdmem'
+        containers: 'petruscar.azurecr.io/ptzpipelinesjavascriptdocker:$(tag)'
