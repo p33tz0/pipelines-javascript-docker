@@ -6,6 +6,7 @@
 
         variables:
           imageName: 'pipelines-javascript-docker'
+          tag: "latest"
 
         steps:
         - task: Docker@2
